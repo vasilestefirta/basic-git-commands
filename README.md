@@ -152,7 +152,7 @@ Go ahead and checkout the master branch:
 
 git checkout master
 
-## #1.23 Preparing to Merge
+## 1.23 Preparing to Merge
 Alrighty, the moment has come when you have to merge your changes from the clean_up branch into the master branch. Take a deep breath, it's not that scary.
 
 We're already on the master branch, so we just need to tell Git to merge the clean_up branch into it:
