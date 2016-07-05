@@ -5,9 +5,7 @@ Our terminal prompt below is currently in a directory we decided to name "octobo
 
 git init
 
-##############
-
-1.2 Checking the Status
+## 1.2 Checking the Status
 Good job! As Git just told us, our "octobox" directory now has an empty repository in /.git/. The repository is a hidden directory where Git operates.
 
 To save your progress as you go through this tutorial -- and earn a badge when you successfully complete it -- head over to create a free Code School account. We'll wait for you here.
@@ -16,38 +14,26 @@ Next up, let's type the git status command to see what the current state of our 
 
 git status
 
-##############
-
-
-1.3 Adding & Committing
+## 1.3 Adding & Committing
 I created a file called octocat.txt in the octobox repository for you (as you can see in the browser below).
 
 You should run the git status command again to see how the repository status has changed:
 
 git status
 
-##########
-
-
-1.4 Adding Changes
+## 1.4 Adding Changes
 Good, it looks like our Git repository is working properly. Notice how Git says octocat.txt is "untracked"? That means Git sees that octocat.txt is a new file.
 
 To tell Git to start tracking changes made to octocat.txt, we first need to add it to the staging area by using git add.
 
 git add octocat.txt
 
-###############
-
-
-1.5 Checking for Changes
+## 1.5 Checking for Changes
 Good job! Git is now tracking our octocat.txt file. Let's run git status again to see where we stand:
 
 git status
 
-##############
-
-
-1.6 Committing
+## 1.6 Committing
 Notice how Git says changes to be committed? The files listed here are in the Staging Area, and they are not in our repository yet. We could add or remove files from the stage before we store them in the repository.
 
 To store our staged changes we run the commit command with a message describing what we've changed. Let's do that now by typing:
