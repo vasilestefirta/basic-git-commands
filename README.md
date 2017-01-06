@@ -5,6 +5,8 @@ Our terminal prompt below is currently in a directory we decided to name "octobo
 
 ```git init```
 
+> **Repository** - A directory where Git has been initialized to start version controlling your files.
+
 ## 1.2 Checking the Status
 Good job! As Git just told us, our "octobox" directory now has an empty repository in /.git/. The repository is a hidden directory where Git operates.
 
@@ -14,12 +16,17 @@ Next up, let's type the git status command to see what the current state of our 
 
 ```git status```
 
+> **The .git directory** - The .git directory it's usually hidden.
+If you open it you'll notice it has all sorts of directories and files inside it. You'll rarely ever need to do anything inside here but it's the guts of Git, where all the magic happens.
+
 ## 1.3 Adding & Committing
 I created a file called octocat.txt in the octobox repository for you (as you can see in the browser below).
 
 You should run the git status command again to see how the repository status has changed:
 
 ```git status```
+
+> It's healthy to run ```git status``` often. Sometimes things change and you don't notice it.
 
 ## 1.4 Adding Changes
 Good, it looks like our Git repository is working properly. Notice how Git says octocat.txt is "untracked"? That means Git sees that octocat.txt is a new file.
@@ -28,10 +35,22 @@ To tell Git to start tracking changes made to octocat.txt, we first need to add 
 
 ```git add octocat.txt```
 
+> **staged** - Files are ready to be committed.
+
+> **unstaged** - Files with changes that have not been prepared to be committed.
+
+> **untracked** - Files aren't tracked by Git yet. This usually indicates a newly created file.
+
+> **deleted** - File has been deleted and is waiting to be removed from Git.
+
 ## 1.5 Checking for Changes
 Good job! Git is now tracking our octocat.txt file. Let's run git status again to see where we stand:
 
 ```git status```
+
+> **add all** - You can also type ```git add -A .``` where the dot stands for the current directory, so everything in and beneath it is added. The ```-A``` ensures even file deletions are included.
+
+> **git reset** - You can use ```git reset <filename>``` to remove a file or files from the staging area.
 
 ## 1.6 Committing
 Notice how Git says changes to be committed? The files listed here are in the Staging Area, and they are not in our repository yet. We could add or remove files from the stage before we store them in the repository.
@@ -40,12 +59,18 @@ To store our staged changes we run the commit command with a message describing 
 
 ```git commit -m "Add cute octocat story"```
 
+> **Staging Area** - A place where we can group files together before we "commit" them to Git.
+
+> **Commit** - A "commit" is a snapshot of our repository. This way if we ever need to look back at the changes we've made (or if someone else does), we will see a nice timeline of all changes.
+
 ## 1.7 Adding All Changes
 Great! You also can use wildcards if you want to add many files of the same type. Notice that I've added a bunch of .txt files into your directory below.
 
 I put some in a directory named "octofamily" and some others ended up in the root of our "octobox" directory. Luckily, we can add all the new files using a wildcard with git add. Don't forget the quotes!
 
 ```git add '*.txt'```
+
+> We need quotes so that Git will receive the wildcard before our shell can interfere with it. Without quotes our shell will only execute the wildcard search within the current directory. Git will receive the list of files the shell found instead of the wildcard and it will not be able to add the files inside of the octofamily directory.
 
 ## 1.8 Committing All Changes
 Okay, you've added all the text files to the staging area. Feel free to run git status to see what you're about to commit.
@@ -54,12 +79,16 @@ If it looks good, go ahead and run:
 
 ```git commit -m 'Add all the octocat txt files'```
 
+> When using wildcards you want to be extra careful when doing commits. Make sure to check what files and folders are staged by using ```git status``` before you do the actual commit. This way you can be sure you're committing only the things you want.
+
 ## 1.9 History
 So we've made a few commits. Now let's browse them to see what we changed.
 
 Fortunately for us, there's git log. Think of Git's log as a journal that remembers all the changes we've committed so far, in the order we committed them. Try running it now:
 
 ```git log```
+
+> Use ```git log --summary``` to see more information for each commit. You can see where new files were added for the first time or where files were deleted. It's a good overview of what's going on in the project.
 
 ## 1.10 Remote Repositories
 Great job! We've gone ahead and created a new empty GitHub repository for you to use with Try Git at https://github.com/try-git/try_git.git. To push our local repo to the GitHub server we'll need to add a remote repository.
