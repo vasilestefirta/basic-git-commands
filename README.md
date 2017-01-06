@@ -70,12 +70,18 @@ Go ahead and run git remote add with the options below:
 
 ```git remote add origin https://github.com/try-git/try_git.git```
 
+> Git doesn't care what you name your remotes, but it's typical to name your main one origin.
+It's also a good idea for your main repository to be on a remote server like [GitHub](http://github.com/) in case your machine is lost at sea during a transatlantic boat cruise or crushed by three monkey statues during an earthquake.
+
 ## 1.11 Pushing Remotely
 The push command tells Git where to put our commits when we're ready, and boy we're ready. So let's push our local changes to our origin repo (on GitHub).
 
 The name of our remote is origin and the default local branch name is master. The -u tells Git to remember the parameters, so that next time we can simply run git push and Git will know what to do. Go ahead and push it!
 
 ```git push -u origin master```
+
+> When you start to get the hang of git you can do some really cool things with ```hooks``` when you push.
+For example, you can upload directly to a webserver whenever you push to your master remote instead of having to upload your site with an ftp client. Check out [Customizing Git - Git Hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks) for more information.
 
 ## 1.12 Pulling Remotely
 Let's pretend some time has passed. We've invited other people to our GitHub project who have pulled your changes, made their own commits, and pushed them.
@@ -84,12 +90,17 @@ We can check for changes on our GitHub repository and pull down any new changes 
 
 ```git pull origin master```
 
+> Sometimes when you go to pull you may have changes you don't want to commit just yet. One option you have, other than commiting, is to stash the changes.
+Use the command ```'git stash'``` to stash your changes, and ```'git stash apply'``` to re-apply your changes after your pull.
+
 ## 1.13 Differences
 Uh oh, looks like there have been some additions and changes to the octocat family. Let's take a look at what is different from our last commit by using the git diff command.
 
 In this case we want the diff of our most recent commit, which we can refer to using the HEAD pointer.
 
 ```git diff HEAD```
+
+> The HEAD is a pointer that holds your position within all your different commits. By default HEAD points to your most recent commit, so it can be used as a quick way to reference that commit without having to look up the SHA.
 
 ## 1.14 Staged Differences
 Another great use for diff is looking at changes within files that have already been staged. Remember, staged files are files we have told git that are ready to be committed.
@@ -110,12 +121,16 @@ You can unstage files by using the git reset command. Go ahead and remove octofa
 
 ```git reset octofamily/octodog.txt```
 
+> You want to try to keep related changes together in separate commits. Using ```'git diff'``` gives you a good overview of changes you have made and lets you add files or directories one at a time and commit them separately.
+
 ## 1.17 Undo
 git reset did a great job of unstaging octodog.txt, but you'll notice that he's still there. He's just not staged anymore. It would be great if we could go back to how things were before octodog came around and ruined the party.
 
 Files can be changed back to how they were at the last commit by using the command: git checkout -- <target>. Go ahead and get rid of all the changes since the last commit for octocat.txt
 
 ```git checkout -- octocat.txt```
+
+> So you may be wondering, why do I have to use this ```'--'``` thing? git checkout seems to work fine without it. It's simply promising the command line that there are no more options after the ```'--'```. This way if you happen to have a branch named ```octocat.txt```, it will still revert the file, instead of switching to the branch of the same name.
 
 ## 1.18 Branching Out
 When developers are working on a feature or bug they'll often create a copy (aka. branch) of their code they can make separate commits to. Then when they're done they can merge this branch back into their main master branch.
@@ -124,6 +139,8 @@ We want to remove all these pesky octocats, so let's create a branch called clea
 
 ```git branch clean_up```
 
+> Branches are what naturally happens when you want to work on multiple features at the same time. You wouldn't want to end up with a master branch which has Feature A half done and Feature B half done. Rather you'd separate the code base into two "snapshots" (branches) and work on and commit to them separately. As soon as one was ready, you might merge this branch back into the master branch and push it to the remote server.
+
 ## 1.19 Switching Branches
 Great! Now if you type git branch you'll see two local branches: a main branch named master and your new branch named clean_up.
 
@@ -131,12 +148,23 @@ You can switch branches using the git checkout <branch> command. Try it now to s
 
 ```git checkout clean_up```
 
+> You can use ```git checkout -b new_branch``` to checkout and create a branch at the same time. This is the same thing as doing:
+
+```
+git branch new_branch
+git checkout new_branch
+```
+
 ## 1.20 Removing All The Things
 Ok, so you're in the clean_up branch. You can finally remove all those pesky octocats by using the git rm command which will not only remove the actual files from disk, but will also stage the removal of the files for us.
 
 You're going to want to use a wildcard again to get all the octocats in one sweep, go ahead and run:
 
 ```git rm '*.txt'```
+
+> Removing one file is great and all, but what if you want to remove an entire folder? You can use the recursive option on git rm:
+```git rm -r folder_of_cats```
+This will recursively remove all folders and files from the given directory.
 
 ## 1.21 Commiting Branch Changes
 Now that you've removed all the cats you'll need to commit your changes.
