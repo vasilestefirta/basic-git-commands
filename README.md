@@ -202,12 +202,19 @@ Feel free to run git status to check the changes you're about to commit.
 
 ```git commit -m "Remove all the cats"```
 
+> If you happen to delete a file without using ```'git rm'``` you'll find that you still have to ```'git rm'``` the deleted files from the working tree. You can save this step by using the ```'-a'``` option on ```'git commit'```, which auto removes deleted files with the commit.
+
+> ```git commit -am "Delete stuff"```
+
 ## 1.22 Switching Back to master
 Great, you're almost finished with the cat... er the bug fix, you just need to switch back to the master branch so you can copy (or merge) your changes from the clean_up branch back into the master branch.
 
 Go ahead and checkout the master branch:
 
 ```git checkout master```
+
+> If you're hosting your repo on GitHub, you can do something called a **pull request**.
+A pull request allows the boss of the project to look through your changes and make comments before deciding to merge in the change. It's a really great feature that is used all the time for remote workers and open-source projects. Check out the [pull request help page](https://help.github.com/articles/using-pull-requests) for more information.
 
 ## 1.23 Preparing to Merge
 Alrighty, the moment has come when you have to merge your changes from the clean_up branch into the master branch. Take a deep breath, it's not that scary.
@@ -216,6 +223,10 @@ We're already on the master branch, so we just need to tell Git to merge the cle
 
 ```git merge clean_up```
 
+> Merge Conflicts can occur when changes are made to a file at the same time. A lot of people get really scared when a conflict happens, but fear not! They aren't that scary, you just need to decide which code to keep.
+
+> Merge conflicts are beyond the scope of this course, but if you're interested in reading more, take a look the section of the [Pro Git book](http://git-scm.com/book) on [how conflicts are presented](http://git-scm.com/docs/git-merge#_how_conflicts_are_presented).
+
 ## 1.24 Keeping Things Clean
 Congratulations! You just accomplished your first successful bugfix and merge. All that's left to do is clean up after yourself. Since you're done with the clean_up branch you don't need it anymore.
 
@@ -223,8 +234,17 @@ You can use git branch -d <branch name> to delete a branch. Go ahead and delete 
 
 ```git branch -d clean_up```
 
+> What if you have been working on a feature branch and you decide you really don't want this feature anymore? You might decide to delete the branch since you're scrapping the idea. You'll notice that ```git branch -d bad_feature``` doesn't work. This is because ```-d``` won't let you delete something that hasn't been merged.
+
+> You can either add the ```--force (-f)``` option or use ```-D``` which combines ```-d -f``` together into one command.
+
 ## 1.25 The Final Push
 Here we are, at the last step. I'm proud that you've made it this far, and it's been great learning Git with you. All that's left for you to do now is to push everything you've been working on to your remote repository, and you're done!
 
 ```git push```
 
+> We only scratched the surface of Git in this course. There is so much more you can do with it. Check out the [Git documentation](http://git-scm.com/docs) for a full list of functions.
+
+> The [Pro Git book](http://git-scm.com/book), by Scott Chacon, is an excellent resource to teach you the inner workings of Git.
+
+> [help.github](https://help.github.com/) and GitHub Training are also great for anything related to Git in general and using Git with GitHub.
