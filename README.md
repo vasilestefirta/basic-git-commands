@@ -72,6 +72,19 @@ I put some in a directory named "octofamily" and some others ended up in the roo
 
 > We need quotes so that Git will receive the wildcard before our shell can interfere with it. Without quotes our shell will only execute the wildcard search within the current directory. Git will receive the list of files the shell found instead of the wildcard and it will not be able to add the files inside of the octofamily directory.
 
+Some more examples:
+> **Add a list of files** - ```git add <list of files>```
+
+> **Add all files** - ```git add --all```
+
+> **Add all txt files in current directory** - ```git add *.txt```
+
+> **Add all txt files in docs directory** - ``` git add docs/*.txt```
+
+> **Add all files in docs directory** - ```git add docs/```
+
+> **Add all txt files in the whole project** - ```git add '*.txt'```
+
 ## 1.8 Committing All Changes
 Okay, you've added all the text files to the staging area. Feel free to run git status to see what you're about to commit.
 
