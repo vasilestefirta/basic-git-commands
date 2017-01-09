@@ -13,10 +13,10 @@
 - Switch back to master: 
   - ```git checkout master```
 - Pull the master branch again:
-  - ```git pull -u origin master```
+  - ```git pull origin master```
 - Switch back to your new branch and merge master into it:
   - ```git checkout <your-branch-name>```
   - ```git merge master```
 - Push the branch up to github and submit it as a pull request:
-  ```git push -u origin <your-branch-name>```
+  - ```git push -u origin <your-branch-name>```
 - That pull request can now receive comments and code discussion, as well as accept new commits before being merged in with the master branch
