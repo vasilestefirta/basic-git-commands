@@ -63,6 +63,8 @@ To store our staged changes we run the commit command with a message describing 
 
 > **Commit** - A "commit" is a snapshot of our repository. This way if we ever need to look back at the changes we've made (or if someone else does), we will see a nice timeline of all changes.
 
+> **Multi-line commit message** -  For a multi-line commit message, you only need to run ```git commit``` without ```-m```. This will open a VI text editor in your terminal. Write your multi-line message here (create a new line break by hitting *enter*) and then press *esc* and write ```:wq``` and hit *enter*.
+
 ## 1.7 Adding All Changes
 Great! You also can use wildcards if you want to add many files of the same type. Notice that I've added a bunch of .txt files into your directory below.
 
