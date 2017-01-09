@@ -187,6 +187,10 @@ We want to remove all these pesky octocats, so let's create a branch called clea
 
 > Branches are what naturally happens when you want to work on multiple features at the same time. You wouldn't want to end up with a master branch which has Feature A half done and Feature B half done. Rather you'd separate the code base into two "snapshots" (branches) and work on and commit to them separately. As soon as one was ready, you might merge this branch back into the master branch and push it to the remote server.
 
+> ```git branch``` - list all local branches
+
+> ```git branch -a``` - list all local and remote branches
+
 ## 1.19 Switching Branches
 Great! Now if you type git branch you'll see two local branches: a main branch named master and your new branch named clean_up.
 
