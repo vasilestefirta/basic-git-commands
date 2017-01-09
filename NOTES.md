@@ -1,7 +1,22 @@
 ## Pull Request WorkFlow
-- Begin by doing a ```git pull``` to get the latest content on your master branch
-- Run ```git branch <your-feature-name>``` to make a git branch
-- Code in your changes, add and commit the files
-- Pull the master branch again and merge it with your new branch
-- Push the branch up to github and submit it as a pull request
+- Begin by doing a ```git pull``` to get the latest content on your master branch:
+  - ```git branch``` - double-check if you are currently in the master branch
+  - ```git pull origin master```
+- Create a new branch:
+  - ```git branch <your-branch-name>```
+- Switch from master branch to your new branch
+  - ```git checkout <your-branch-name>```
+- Code in your changes, add and commit the files:
+  - make changes
+  - ```git add -A```
+  - ```git commit -m "my changes"```
+- Switch back to master: 
+  - ```git checkout master```
+- Pull the master branch again:
+  - ```git pull -u origin master```
+- Switch back to your new branch and merge master into it:
+  - ```git checkout <your-branch-name>```
+  - ```git merge master```
+- Push the branch up to github and submit it as a pull request:
+  ```git push -u origin <your-branch-name>```
 - That pull request can now receive comments and code discussion, as well as accept new commits before being merged in with the master branch
