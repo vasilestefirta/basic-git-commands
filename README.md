@@ -257,6 +257,8 @@ You can use git branch -d <branch name> to delete a branch. Go ahead and delete 
 
 > You can either add the ```--force (-f)``` option or use ```-D``` which combines ```-d -f``` together into one command.
 
+> **Delete a remote branch** - ```git branch -d clean_up``` will only remove the branch locally, but if it happened that you pushed that branch to the remote repository as well, then you need to run ```git push origin --delete clean_up``` to remove that branch from the remote repository.
+
 ## 1.25 The Final Push
 Here we are, at the last step. I'm proud that you've made it this far, and it's been great learning Git with you. All that's left for you to do now is to push everything you've been working on to your remote repository, and you're done!
 
