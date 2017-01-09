@@ -220,7 +220,7 @@ Feel free to run ```git status``` to check the changes you're about to commit.
 > ```git commit -am "Delete stuff"```
 
 ## 1.22 Switching Back to master
-Great, you're almost finished with the cat... er the bug fix, you just need to switch back to the master branch so you can copy (or merge) your changes from the clean_up branch back into the master branch.
+Great, you're almost finished with the cat... er the bug fix, you just need to switch back to the master branch so you can copy (or merge) your changes from the *clean_up* branch back into the *master* branch.
 
 Go ahead and checkout the master branch:
 
