@@ -211,7 +211,7 @@ This will recursively remove all folders and files from the given directory.
 ## 1.21 Commiting Branch Changes
 Now that you've removed all the cats you'll need to commit your changes.
 
-Feel free to run git status to check the changes you're about to commit.
+Feel free to run ```git status``` to check the changes you're about to commit.
 
 ```git commit -m "Remove all the cats"```
 
