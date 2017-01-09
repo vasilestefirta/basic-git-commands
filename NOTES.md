@@ -28,3 +28,5 @@
 - Set config values for a local specific repo (just remove ```--global``` or replace it with ```--local```):
   - ```git config user.name "John Smith"```
   - ```git config user.email "john.smith@nomail.com"```
+- Check config values:
+  - ```git config --list```
