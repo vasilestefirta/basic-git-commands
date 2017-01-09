@@ -50,7 +50,9 @@ Good job! Git is now tracking our octocat.txt file. Let's run git status again t
 
 > **add all** - You can also type ```git add -A .``` where the dot stands for the current directory, so everything in and beneath it is added. The ```-A``` ensures even file deletions are included.
 
-> **git reset** - You can use ```git reset <filename>``` to remove a file or files from the staging area.
+> **```git reset <filename>```** - You can use this command to remove a file or multiple files from the staging area.
+
+> **```git reset```** - You can use this command to remove all files from the staging area.
 
 ## 1.6 Committing
 Notice how Git says changes to be committed? The files listed here are in the Staging Area, and they are not in our repository yet. We could add or remove files from the stage before we store them in the repository.
