@@ -1,3 +1,10 @@
+## Need help?
+- ```git help <verb>```
+- ```git <verb> --help```
+
+> **Example:** ```git help config``` or ```git config --help```
+
+
 ## Pull Request WorkFlow
 - Begin by doing a ```git pull``` to get the latest content on your master branch:
   - ```git branch``` - double-check if you are currently in the master branch
