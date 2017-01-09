@@ -242,6 +242,8 @@ We're already on the master branch, so we just need to tell Git to merge the cle
 
 > Merge conflicts are beyond the scope of this course, but if you're interested in reading more, take a look the section of the [Pro Git book](http://git-scm.com/book) on [how conflicts are presented](http://git-scm.com/docs/git-merge#_how_conflicts_are_presented).
 
+> A simple way to fix conflicts is to manually edit the file that has conflicts and decide what changes to keep. After you updated the file, run ```git add <file>``` to add the file to the staging area and then run ```git commit```.
+
 ## 1.24 Keeping Things Clean
 Congratulations! You just accomplished your first successful bugfix and merge. All that's left to do is clean up after yourself. Since you're done with the clean_up branch you don't need it anymore.
 
