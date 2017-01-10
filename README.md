@@ -71,6 +71,8 @@ To store our staged changes we run the commit command with a message describing 
 
 > **Add a file to the latest commit (w/o creating a new commit)** - if you ever need to do that then, first of all, you need to make sure that your file was added to the staging area (via ```git add <file>```), then you need to run ```git commit --amend```. This will open up the Vim editor where you can update the latest commit's message if you need to. After that just press *esc*, write ```:wq``` and hit *enter*. To check if your file was successfully added to the latest commit, you can run ```git log --stat```. **CAREFUL** - this will update the git history as well.
 
+> **Revert some existing commits** - run ```git revert <commit>``` to revert a previously created commit. As a result, if you check ```git log```, then you'll notice that the commit we tried to revert is still there untouched, and now there's a new commit that says: ***Revert "YOUR REVERTED COMMIT'S MESSAGE"***.
+
 ## 1.7 Adding All Changes
 Great! You also can use wildcards if you want to add many files of the same type. Notice that I've added a bunch of .txt files into your directory below.
 
