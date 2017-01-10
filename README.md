@@ -154,6 +154,8 @@ In this case we want the diff of our most recent commit, which we can refer to u
 
 > The HEAD is a pointer that holds your position within all your different commits. By default HEAD points to your most recent commit, so it can be used as a quick way to reference that commit without having to look up the SHA.
 
+> run ```git diff HEAD~``` or ```git diff @~ to see the difference between last but one commit and last commit (plus current state, if any)
+
 ## 1.14 Staged Differences
 Another great use for diff is looking at changes within files that have already been staged. Remember, staged files are files we have told git that are ready to be committed.
 
