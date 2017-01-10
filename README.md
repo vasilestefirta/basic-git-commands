@@ -67,6 +67,10 @@ To store our staged changes we run the commit command with a message describing 
 
 > **Multi-line commit message** -  For a multi-line commit message, you only need to run ```git commit``` without ```-m```. This will open a VI text editor in your terminal. Write your multi-line message here (create a new line break by hitting *enter*) and then press *esc* and write ```:wq``` and hit *enter*.
 
+> **Change the commit message for your latest commit** - if you ever need to do that, then you can run ```git commit --amend -m "YOUR NEW MESSAGE HERE"```. **CAREFUL** - this will update the git history (it changes the history log's unique hash). It is recommended to run this commend, only if you're the only one who have seen the history (working on a temporary branch for example). If you'll change the history of any other developers, then this can cause issues with their repositories.
+
+> **Add a file to the latest commit, w/o creating a new one** - if you ever need to do that then, first of all, you need to make sure that your file was added to the staging area (via ```git add <file>```), then you need to run ```git commit --amend```. This will open up the Vim editor where you can update the latest commit's message if you need to. After that just press *esc*, write ```:wq``` and hit *enter*. To check if your file was successfully added to the latest commit, you can run ```git log --stat```.
+
 ## 1.7 Adding All Changes
 Great! You also can use wildcards if you want to add many files of the same type. Notice that I've added a bunch of .txt files into your directory below.
 
