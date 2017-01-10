@@ -119,3 +119,21 @@ Let's say you've been working on the *master* branch and you have quite a bit of
 
 - [http://stackoverflow.com/a/34519716](http://stackoverflow.com/a/34519716)
 - [http://stackoverflow.com/a/21778](http://stackoverflow.com/a/21778)
+
+---
+
+## ```git stash``` commands:
+
+1. ```git stash``` or ```git stash save "<YOUR_STASH_MESSAGE>"``` - this will save your local modifications away and reverts the working directory to match the HEAD commit.
+
+2. ```git stash list``` will list all the stashes that you have created
+
+  **Output example:**: ```stash@{0}: WIP on master: 025f724 quick change to index.html```
+
+3. ```git stash apply <stash>``` - this will add back those changes you saved into your current working directory, but it will NOT remove the stash itself
+
+4. ```git stash pop``` - this will add back those changes you *LAST* saved (the latest created stash) into your current working directory and it will remove the stash itself
+
+5. ```git stash drop <stash>``` - this will remove a stash
+
+6. ```git stash clear``` - this will remove all existing stashes
