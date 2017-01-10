@@ -283,3 +283,5 @@ Here we are, at the last step. I'm proud that you've made it this far, and it's 
 > The [Pro Git book](http://git-scm.com/book), by Scott Chacon, is an excellent resource to teach you the inner workings of Git.
 
 > [help.github](https://help.github.com/) and GitHub Training are also great for anything related to Git in general and using Git with GitHub.
+
+> [GitHub Git Cheat Sheet](https://education.github.com/git-cheat-sheet-education.pdf)
