@@ -114,3 +114,8 @@ Let's say you've been working on the *master* branch and you have quite a bit of
   ```
   
   This saves the modifications, then reapplies that patch after resetting. You could get merge conflicts, if you've modified things which were changed since the commit you reset to.
+  
+**References:**
+
+- [http://stackoverflow.com/a/34519716](http://stackoverflow.com/a/34519716)
+- [http://stackoverflow.com/a/21778](http://stackoverflow.com/a/21778)
