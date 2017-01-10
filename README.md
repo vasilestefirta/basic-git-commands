@@ -154,7 +154,7 @@ In this case we want the diff of our most recent commit, which we can refer to u
 
 > The HEAD is a pointer that holds your position within all your different commits. By default HEAD points to your most recent commit, so it can be used as a quick way to reference that commit without having to look up the SHA.
 
-> run ```git diff HEAD~``` or ```git diff @~ to see the difference between last but one commit and last commit (plus current state, if any)
+> run ```git diff HEAD~``` or ```git diff @~``` to see the difference between last but one commit and last commit (plus current state, if any)
 
 > Use ```git show HEAD~1``` to show the last-but-one commit, and ```git show HEAD~2```, etc. for older commits.
 
