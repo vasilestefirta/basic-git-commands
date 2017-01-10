@@ -156,6 +156,8 @@ In this case we want the diff of our most recent commit, which we can refer to u
 
 > run ```git diff HEAD~``` or ```git diff @~ to see the difference between last but one commit and last commit (plus current state, if any)
 
+> Use ```git show HEAD~1``` to show the last-but-one commit, and ```git show HEAD~2```, etc. for older commits.
+
 ## 1.14 Staged Differences
 Another great use for diff is looking at changes within files that have already been staged. Remember, staged files are files we have told git that are ready to be committed.
 
