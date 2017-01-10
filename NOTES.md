@@ -71,3 +71,46 @@ Let's say you have 2 branches: *master* and *dev*. You've made a bunch of change
 2. ```git reset <PASTE_YOUR_HASH_STRING_HERE>``` (default/mixed) - this will reset your branch to a specific commit and will remove all your changes you've done since then from the *staging area*, but will keep them into the *working directory* (basically to that moment before you ran ```git add``` to add your changes to the *staging area*)
 
 3. ```git reset --hard <PASTE_YOUR_HASH_STRING_HERE>``` - this will reset your branch to a specific commit and will remove all your changes you've made since then. **NOTE** that it will keep all *untracked* files and if you want to remove them, then you'll need to run ```git clean -df```, where ```d``` stads for *directories* and ```f``` stands for *files*.
+
+---
+
+## Recover committed changes after running ```git reset --hard``` using ```git reflog```
+
+> **NOTE:** You can get the commit back so long as it's been within a few days. git only garbage collects after about a month or so unless you explicitly tell it to remove newer blobs.
+
+Let's say you've been working on the *master* branch and you have quite a bit of commits created. At some point you wanted to do a ```git reset --hard``` and reset your branch to a previous commit. How do you undo that?
+
+- run ```git  reflog``` - this will list all the commits in the order you last referenced them (it includes ```commit``` commands as well as ```reset```, ```checkout``` etc.). 
+  
+  **Output example:** 
+  
+  ```
+  0239a45 HEAD@{16}: pull origin master: Fast-forward
+  19ddd52 HEAD@{29}: commit: App version update
+  ```
+
+- Copy the hash of your commit you want to revert to then:
+
+**OPTION 1:**
+
+- run ```git checkout <PASTE_YOUR_HASH_STRING_HERE>``` - this will get you in a detachead HEAD state. This state will be garbage collected at some point.
+
+- to save this state, you can create a branch out of it by running ```git checkout <YOUR_BRANCH_NAME>```
+
+- use that *"backup"* branch you just created to merge those lost changes back into *master*
+
+**OPTION 2:**
+
+- run ```git reset --hard <PASTE_YOUR_HASH_STRING_HERE>``` - this will *"move"* your head back to the desired commit.
+  
+  **NOTE:** This will destroy any local modifications. Don't do it if you have uncommitted work you want to keep.
+  
+  Alternatively, if there's work to keep:
+  
+  ```
+  git stash
+  git reset --hard <PASTE_YOUR_HASH_STRING_HERE>
+  git stash pop
+  ```
+  
+  This saves the modifications, then reapplies that patch after resetting. You could get merge conflicts, if you've modified things which were changed since the commit you reset to.
