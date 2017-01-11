@@ -1,3 +1,5 @@
+All of these steps are just copy & paste from [try.github.io](https://try.github.io) (big thanks to [codeschool.com](https://www.codeschool.com/) for putting them all together), plus some addional tips I found from other resources.
+
 ## 1.1 Got 15 minutes and want to learn Git?
 Git allows groups of people to work on the same documents (often code) at the same time, and without stepping on each other's toes. It's a distributed version control system.
 
