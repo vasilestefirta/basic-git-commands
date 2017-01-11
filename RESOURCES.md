@@ -11,3 +11,4 @@
 - [(YouTube - LearnCode.academy) Github Tutorial For Beginners - Github Basics for Mac or Windows & Source Control Basics](https://youtu.be/0fKg7e37bQE)
 - [(YouTube - LearnCode.academy) GITHUB PULL REQUEST, Branching, Merging & Team Workflow](https://youtu.be/oFYyTZwMyAg)
 - [(YouTube - Corey Schafer) Git Tutorials](https://www.youtube.com/playlist?list=PL-osiE80TeTuRUfjRe54Eea17-YfnOOAx)
+- [help.github](https://help.github.com/)
