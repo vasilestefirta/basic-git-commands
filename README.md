@@ -50,7 +50,15 @@ Good job! Git is now tracking our octocat.txt file. Let's run git status again t
 
 ```git status```
 
-> **add all** - You can also type ```git add -A .``` where the dot stands for the current directory, so everything in and beneath it is added. The ```-A``` ensures even file deletions are included.
+> **```git add -A```** - (default behavior for ```git add```). This will add all new, changed, deleted and hidden files from the current directory, subdirectories and parent directories as well (if there are some).
+
+> **```git add -A .```** - This will add all new, changed, deleted and hidden files from the current directory only.
+
+> **```git add -A <dir>```** - This will add all new, changed, deleted and hidden files from the specified directory only.
+
+> **```git add -u```** - This is similar with ```git add -A```, but will only add updated and deleted files to the staging area.
+
+> **```git add .```** - This is the same as ```git add -A .```
 
 > **```git reset <filename>```** - You can use this command to remove a file or multiple files from the staging area.
 
