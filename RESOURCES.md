@@ -1,0 +1,2 @@
+- [ohshitgit.com](http://ohshitgit.com/)
+- [git-scm.com](https://git-scm.com/docs/)
