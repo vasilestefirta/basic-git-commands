@@ -85,7 +85,7 @@ I put some in a directory named "octofamily" and some others ended up in the roo
 Some more examples:
 > **Add a list of files** - ```git add <list of files>```
 
-> **Add all files** - ```git add --all```
+> **Add all files** - ```git add -A``` or ```git add --all```
 
 > **Add all txt files in current directory** - ```git add *.txt```
 
