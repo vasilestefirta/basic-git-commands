@@ -124,13 +124,13 @@ Go ahead and run git remote add with the options below:
 
 ```git remote add origin https://github.com/try-git/try_git.git```
 
-> Git doesn't care what you name your remotes, but it's typical to name your main one origin.
+> Git doesn't care what you name your remotes, but it's typical to name your main one ```origin```.
 It's also a good idea for your main repository to be on a remote server like [GitHub](http://github.com/) in case your machine is lost at sea during a transatlantic boat cruise or crushed by three monkey statues during an earthquake.
 
 ## 1.11 Pushing Remotely
 The push command tells Git where to put our commits when we're ready, and boy we're ready. So let's push our local changes to our origin repo (on GitHub).
 
-The name of our remote is origin and the default local branch name is master. The -u tells Git to remember the parameters, so that next time we can simply run git push and Git will know what to do. Go ahead and push it!
+The name of our remote is origin and the default local branch name is master. The ```-u``` tells Git to remember the parameters, so that next time we can simply run git push and Git will know what to do. Go ahead and push it!
 
 ```git push -u origin master```
 
@@ -168,7 +168,7 @@ Let's use git add to stage octofamily/octodog.txt, which I just added to the fam
 ```git add octofamily/octodog.txt```
 
 ## 1.15 Staged Differences (cont'd)
-Good, now go ahead and run git diff with the --staged option to see the changes you just staged. You should see that octodog.txt was created.
+Good, now go ahead and run git diff with the ```--staged``` option to see the changes you just staged. You should see that octodog.txt was created.
 
 ```git diff --staged```
 
@@ -184,7 +184,7 @@ You can unstage files by using the git reset command. Go ahead and remove octofa
 ## 1.17 Undo
 git reset did a great job of unstaging octodog.txt, but you'll notice that he's still there. He's just not staged anymore. It would be great if we could go back to how things were before octodog came around and ruined the party.
 
-Files can be changed back to how they were at the last commit by using the command: git checkout -- <target>. Go ahead and get rid of all the changes since the last commit for octocat.txt
+Files can be changed back to how they were at the last commit by using the command: ```git checkout -- <file>```. Go ahead and get rid of all the changes since the last commit for octocat.txt
 
 ```git checkout -- octocat.txt```
 
