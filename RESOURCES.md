@@ -4,6 +4,8 @@
 - [Git documentation](https://git-scm.com/docs/)
 - [Pro Git book](http://git-scm.com/book)
 - [GitHub Git Cheat Sheet](https://education.github.com/git-cheat-sheet-education.pdf)
+- [Interactive Git Cheat Sheat](http://ndpsoftware.com/git-cheatsheet.html)
+- [Atlassian Git Tutorial](https://www.atlassian.com/git/)
 - [tryGit](https://try.github.io)
 - [(YouTube - LearnCode.academy) Github Tutorial For Beginners - Github Basics for Mac or Windows & Source Control Basics](https://youtu.be/0fKg7e37bQE)
 - [(YouTube - LearnCode.academy) GITHUB PULL REQUEST, Branching, Merging & Team Workflow](https://youtu.be/oFYyTZwMyAg)
