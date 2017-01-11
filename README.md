@@ -113,6 +113,8 @@ Fortunately for us, there's git log. Think of Git's log as a journal that rememb
 
 > Use ```git log --summary``` to see more information for each commit. You can see where new files were added for the first time or where files were deleted. It's a good overview of what's going on in the project.
 
+> Use ```git log --oneline``` to see a very compact version of ```git log```
+
 ## 1.10 Remote Repositories
 Great job! We've gone ahead and created a new empty GitHub repository for you to use with Try Git at https://github.com/try-git/try_git.git. To push our local repo to the GitHub server we'll need to add a remote repository.
 
