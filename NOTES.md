@@ -58,11 +58,15 @@ Let's say you have 2 branches: *master* and *dev*. You've made a bunch of change
 
 5. run ```git log``` and double-check that your commit was copied
 
+6. if you need to push the commit to your remote branch, then run ```git push origin dev```.
+
 6. switch back to the master branch: ```git checkout master```
 
 7. run ```git log``` and copy the hash string of that commit you want to reset your branch to.
 
 8. run ```git reset --hard <PASTE_YOUR_HASH_STRING_HERE>``` to reset your branch to that commit.
+
+9. if the commit you're trying to remove from your local *master* branch was already pushed to the remote *master* branch, then you'll need to force push your local changes and **OVERWRITE GIT HISTORY**: ```git push --force origin master```
 
 **A FEW NOTES HERE:**
 
